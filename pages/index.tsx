@@ -1,10 +1,11 @@
 import type { NextPage } from 'next'
+import Home from '../src/components/screens/home/Home'
 
 
-const Home: NextPage = () => {
+const HomePage: NextPage = () => {
   return (
-    <div className='underline'>hello world</div>
+    <Home/>
   )
 }
 
-export default Home
+export default HomePage

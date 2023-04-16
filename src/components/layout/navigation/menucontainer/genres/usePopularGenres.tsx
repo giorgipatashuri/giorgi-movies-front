@@ -1,6 +1,5 @@
 import { useQuery } from "react-query"
 import { GenreService } from "../../../../../services/genre.service"
-import { IGenre } from "../../../../../shared/types/movies.types"
 import { IMenuItem } from "../menu.interface"
 
 export const usePopularGenres=()=>{

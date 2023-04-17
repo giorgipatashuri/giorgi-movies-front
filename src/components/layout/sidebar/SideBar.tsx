@@ -1,6 +1,11 @@
-const SideBar = () => {
+import styles from './SideBar.module.scss'
+import Search from './search/Search'
+
+const SideBar:React.FC = () => {
   return (
-    <div>SideBar</div>
+    <div className={styles.sidebar}>
+      <Search/>
+    </div>
   )
 }
 export default SideBar

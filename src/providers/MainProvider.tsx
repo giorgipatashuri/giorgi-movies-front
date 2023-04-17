@@ -1,5 +1,11 @@
 import { QueryClient, QueryClientProvider } from "react-query"
 
+
+interface MainProviderProps{
+  children:React.ReactNode
+}
+
+
 const queryClient = new QueryClient({
   defaultOptions:{
     queries:{
@@ -9,10 +15,10 @@ const queryClient = new QueryClient({
 })
 
 
-const MainProvider:React.FC = () => {
+const MainProvider:React.FC<MainProviderProps> = ({children}) => {
   return (
     <QueryClientProvider client={queryClient} >
-
+      {children}
     </QueryClientProvider>
   )
 }

@@ -3,7 +3,11 @@ import { getGenresUrl } from "../config/api.config"
 import { IGenre } from "../shared/types/movies.types"
 
 export const GenreService={
-  async getPopularGenres(){
-    return axsiosClassic.get<IGenre[]>(getGenresUrl('/popular'))
+  async getAll(searchTerm?:string){
+    return axsiosClassic.get<IGenre[]>(getGenresUrl(''),{
+      params:searchTerm ? {
+        searchTerm
+      } : {}
+    })
   }
 }
